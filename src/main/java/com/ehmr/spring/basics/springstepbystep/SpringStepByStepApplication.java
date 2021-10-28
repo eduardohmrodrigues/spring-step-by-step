@@ -10,7 +10,9 @@ public class SpringStepByStepApplication {
 
 		int[] numbers = new int[] {5, 3, 24};
 
-		BinarySearchImpl binarySearch = new BinarySearchImpl();
+		SortAlgorithm sortAlgorithm = new QuickSortAlgorithm();
+
+		BinarySearchImpl binarySearch = new BinarySearchImpl(sortAlgorithm);
 		System.out.println(binarySearch.binarySearch(numbers, 3));
 
 		SpringApplication.run(SpringStepByStepApplication.class, args);
