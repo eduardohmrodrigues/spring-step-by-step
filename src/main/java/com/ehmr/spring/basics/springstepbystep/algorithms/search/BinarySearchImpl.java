@@ -1,8 +1,12 @@
-package com.ehmr.spring.basics.springstepbystep;
+package com.ehmr.spring.basics.springstepbystep.algorithms.search;
+
+import com.ehmr.spring.basics.springstepbystep.algorithms.sort.SortAlgorithm;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
-public class BinarySearchImpl {
+@Component
+public class BinarySearchImpl implements SearchAlgorithm {
 
     private SortAlgorithm sortAlgorithm;
 
@@ -10,7 +14,7 @@ public class BinarySearchImpl {
         this.sortAlgorithm = sortAlgorithm;
     }
 
-    public int binarySearch(int[] arr, int number) {
+    public int search(int[] arr, int number) {
         // Sort the array elements
         int[] sorted = sortAlgorithm.sort(arr);
 

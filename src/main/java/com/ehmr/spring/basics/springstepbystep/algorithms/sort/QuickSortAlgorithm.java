@@ -1,4 +1,4 @@
-package com.ehmr.spring.basics.springstepbystep;
+package com.ehmr.spring.basics.springstepbystep.algorithms.sort;
 
 import java.util.Arrays;
 
