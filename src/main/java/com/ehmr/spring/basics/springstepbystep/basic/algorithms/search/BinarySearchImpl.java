@@ -1,6 +1,6 @@
-package com.ehmr.spring.basics.springstepbystep.algorithms.search;
+package com.ehmr.spring.basics.springstepbystep.basic.algorithms.search;
 
-import com.ehmr.spring.basics.springstepbystep.algorithms.sort.SortAlgorithm;
+import com.ehmr.spring.basics.springstepbystep.basic.algorithms.sort.SortAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;

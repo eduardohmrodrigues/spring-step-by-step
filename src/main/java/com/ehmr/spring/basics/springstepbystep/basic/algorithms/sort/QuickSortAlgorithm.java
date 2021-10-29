@@ -1,4 +1,4 @@
-package com.ehmr.spring.basics.springstepbystep.algorithms.sort;
+package com.ehmr.spring.basics.springstepbystep.basic.algorithms.sort;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
