@@ -1,28 +1,24 @@
 package com.ehmr.spring.basics.springstepbystep;
 
-import com.ehmr.spring.basics.springstepbystep.scope.PersonDAO;
+import com.ehmr.spring.basics.componentscan.ComponentDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-public class SpringStepByStepScopeApplication {
+@ComponentScan("com.ehmr.spring.basics.componentscan")
+public class SpringStepByStepComponentScanApplication {
 
     private static Logger LOGGER = LoggerFactory.getLogger(SpringStepByStepScopeApplication.class);
 
     public static void main(String[] args) {
         ApplicationContext appContext = SpringApplication.run(SpringStepByStepScopeApplication.class, args);
 
-        PersonDAO personDAO1 = appContext.getBean(PersonDAO.class);
-        PersonDAO personDAO2 = appContext.getBean(PersonDAO.class);
+        ComponentDAO componentDAO = appContext.getBean(ComponentDAO.class);
 
-        LOGGER.info("{}", personDAO1);
-        LOGGER.info("{}", personDAO1.getJdbcConnection());
-
-        LOGGER.info("{}", personDAO2);
-        LOGGER.info("{}", personDAO2.getJdbcConnection());
-        LOGGER.info("{}", personDAO2.getJdbcConnection());
+        LOGGER.info("{}", componentDAO);
     }
 }
