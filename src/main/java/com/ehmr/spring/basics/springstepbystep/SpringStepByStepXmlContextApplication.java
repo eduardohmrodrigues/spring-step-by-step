@@ -1,5 +1,6 @@
 package com.ehmr.spring.basics.springstepbystep;
 
+import com.ehmr.spring.basics.springstepbystep.scope.PersonDAO;
 import com.ehmr.spring.basics.springstepbystep.xml.XmlPersonDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,10 +14,13 @@ public class SpringStepByStepXmlContextApplication {
         try(ClassPathXmlApplicationContext appContext =
                     new ClassPathXmlApplicationContext("applicationContext.xml")){
 
-            XmlPersonDAO personDAO1 = appContext.getBean(XmlPersonDAO.class);
+            LOGGER.info("Beans -> {}", (Object) appContext.getBeanDefinitionNames());
 
-            LOGGER.info("{}", personDAO1);
-            LOGGER.info("{}", personDAO1.getXmlJdbcConnection());
+            PersonDAO personDAO = appContext.getBean(PersonDAO.class);
+            XmlPersonDAO xmlPersonDAO = appContext.getBean(XmlPersonDAO.class);
+
+            LOGGER.info("PersonDAO -> {} {}", personDAO, personDAO.getJdbcConnection());
+            LOGGER.info("XlmPersonDAO -> {} {}", xmlPersonDAO, xmlPersonDAO.getXmlJdbcConnection());
         }
     }
 }
