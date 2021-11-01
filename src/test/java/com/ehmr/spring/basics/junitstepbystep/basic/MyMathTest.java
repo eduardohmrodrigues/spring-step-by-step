@@ -1,4 +1,4 @@
-package com.ehmr.spring.basics.junitstepbystep;
+package com.ehmr.spring.basics.junitstepbystep.basic;
 
 import org.junit.jupiter.api.Test;
 
