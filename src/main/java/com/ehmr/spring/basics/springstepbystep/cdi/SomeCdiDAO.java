@@ -7,4 +7,8 @@ public class SomeCdiDAO {
     public SomeCdiDAO() {
         System.out.println("SomeCdiDAO Constructor");
     }
+
+    public int[] getData() {
+        return new int[] {1, 5, 99};
+    }
 }

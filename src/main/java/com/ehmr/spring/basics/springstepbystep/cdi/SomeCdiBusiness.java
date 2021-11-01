@@ -7,6 +7,9 @@ import javax.inject.Named;
 public class SomeCdiBusiness {
 
     @Inject
-    SomeCdiDAO someCDIDAO;
+    SomeCdiDAO someCdiDAO;
 
+    public int getSizeOfDB() {
+        return someCdiDAO.getData().length;
+    }
 }
